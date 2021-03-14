@@ -2,16 +2,78 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
     <title>Ceaser Cipher</title>
 </head>
 
 <body>
-    <div>
-        <input placeholder='Type your message to encrypt here!' id='code'>
-        <input placeholder="type the number you want to encrypt by" id="number">
+    <div class="container-fluid" id="container">
+        <div class="innerContainer">
+            <div class="d-flex flex-row" id="header-logo">
+            <h1 class="mt-5 ml-5">The Ceaser Cipher</h1>
+            <img class= "ml-auto" src="images/helmet.jpg">
+        </div>
+            <p class="d-inline-flex p-5 border mt-3 text-justify"> <b>About:</b><br>
+                The "Caesar Box," or "Caesar Cipher," is one of the earliest known ciphers. Developed around 100 BC, it
+                was
+                used by Julius Caesar to send secret messages to his generals in the field. In the event that one of his
+                messages got intercepted, his opponent could not read them.<br><br>
+
+                Caesar shifted each letter of his message three letters to the right to produce what could be called the
+                ciphertext. The ciphertext is what the enemy would see instead of the true message. So, for example, if
+                Caesar’s messages were written in the English alphabet, each letter “A” in the message would become a
+                "D,"
+                the "B’s" would become "E’s," and the "X's" become "A’s." This type of cipher is appropriately called a
+                “shift cipher.”<br><br>
+
+                Caesar’s magic number was three, however, a modern day use of the Caesar Cipher is a code called
+                "ROT13."
+                ROT13, short for "rotate by 13 places," shifts each letter of the English alphabet 13 spaces. It is
+                often
+                used in online forums to hide information such as movie and tv show spoilers, solutions to puzzles or
+                games,
+                or offensive material. The code is easily crackable, however, it hides the information from the quick
+                glance.</p>
+            <br><br>
+            <div id="result" class="d-flex justify-content-center pb-3">
+                <p></p>
+            </div>
+            <div>
+                <input class="form-control" placeholder='Type your message to encrypt here!' id='code'><br>
+
+                <input  placeholder="Number to encrypt by" id="number"><br><br>
+
+                <button onclick="encrypt()">Submit</button>
+            </div>
+
+        </div>
     </div>
-    <button onclick="encrypt()">Encyrpt/Decrypt</button>
-    <div id="result"></div>
     <script src="script.js"></script>
 </body>
 

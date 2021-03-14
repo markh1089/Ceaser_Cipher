@@ -1,13 +1,14 @@
+let userInput, shift;
 
 function encrypt() {
-    let userInput = document.getElementById('code').value;
-    let shift = document.getElementById('number').value;
+    userInput = document.getElementById('code').value;
+    shift = document.getElementById('number').value;
     let encryptedMessage = '';
 
     for (letter of userInput) {
         encryptedMessage += letterChange(letter,shift);
     }
-    console.log(encryptedMessage);
+    document.getElementById('result').innerHTML= encryptedMessage;
 }
 
 function letterChange(letter,shift) {
@@ -25,43 +26,8 @@ function letterChange(letter,shift) {
     return newLetter
 }
 
-console.log(encrypt())
 
+setTimeout(() => {
+    console.log(userInput,shift)
+},10000)
 
-
-//below only works for 1 letter substitution!
-/*const alphabet = 'abcdefghijklmnopqrstuvwxyz'
-
-function encrypt() {
-    let text = document.getElementById('code').value;
-    let returnText = [];
-    for (let i = 0; i < text.length; i++) {
-        returnText.push(enc(text[i]));
-        console.log(returnText)
-    }
-    ;
-}
-
-function enc(x) {
-    if (x === 'a') {
-        return 'e';
-
-    }
-
-
-}
-
-function loop() {
-    let number = 3
-
-    /*while (number < number.length) {
-        return 
-    }*/
-    // for (let i = 0; i < alphabet.length; i++) {
-    //     if(i === number){
-    //         break;
-    //     }
-    //     console.log(alphabet[i])
-    // }
-
-//console.log(loop())
